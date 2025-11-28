@@ -13,14 +13,14 @@ Instructions for Play:
 */
 
 // declare global variables
-
+Spider spider;
 
 // setup function
 void setup() {
   
   size(400, 400);
   
-  
+  spider = new Spider();
   
 }
 
@@ -29,6 +29,6 @@ void draw() {
   
   background(255);
   
-  
+  spider.display();
   
 }
