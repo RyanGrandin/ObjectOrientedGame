@@ -18,7 +18,7 @@ Spider spider;
 // setup function
 void setup() {
   
-  size(400, 400);
+  size(800, 600);
   
   spider = new Spider();
   
@@ -30,5 +30,6 @@ void draw() {
   background(255);
   
   spider.display();
+  spider.move();
   
 }
