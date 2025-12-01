@@ -21,10 +21,31 @@ class Spider {
   void display() {
     
     // string
+    strokeWeight(1);
     stroke(0);
     line(width/2, 0, location.x, location.y);
     
     // legs
+    strokeWeight(1);
+    stroke(0);
+    
+    line(location.x - 15, location.y - 10, location.x + 15, location.y - 10);
+    line(location.x - 15, location.y - 10, location.x - 25, location.y - 5);
+    line(location.x + 15, location.y - 10, location.x + 25, location.y - 5);
+    
+    line(location.x - 15, location.y - 5, location.x + 15, location.y - 5);
+    line(location.x - 15, location.y - 5, location.x - 25, location.y);
+    line(location.x + 15, location.y - 5, location.x + 25, location.y);
+    
+    
+    line(location.x - 15, location.y, location.x + 15, location.y);
+    line(location.x - 15, location.y, location.x - 25, location.y + 5);
+    line(location.x + 15, location.y, location.x + 25, location.y + 5);
+    
+    
+    line(location.x - 15, location.y + 5, location.x + 15, location.y + 5);
+    line(location.x - 15, location.y + 5, location.x - 25, location.y + 10);
+    line(location.x + 15, location.y + 5, location.x + 25, location.y + 10);
     
     
     // body
@@ -44,7 +65,7 @@ class Spider {
     
     velocity.add(acceleration);
     location.add(velocity);
-    velocity.limit(10);
+    velocity.limit(15);
     
   }
   
