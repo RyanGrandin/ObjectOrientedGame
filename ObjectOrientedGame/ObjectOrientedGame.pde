@@ -13,6 +13,7 @@ Instructions for Play:
 */
 
 // declare global variables
+Webs webs;
 Spider spider;
 
 // setup function
@@ -20,6 +21,7 @@ void setup() {
   
   size(800, 600);
   
+  webs = new Webs();
   spider = new Spider();
   
 }
@@ -29,6 +31,7 @@ void draw() {
   
   background(255);
   
+  webs.display();
   spider.display();
   spider.move();
   
