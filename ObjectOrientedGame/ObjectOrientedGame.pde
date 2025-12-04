@@ -14,6 +14,9 @@ Instructions for Play:
 
 // declare global variables
 Webs webs;
+Fly fly;
+Butterfly butterfly;
+Centipede centipede;
 Spider spider;
 
 // setup function
@@ -22,6 +25,9 @@ void setup() {
   size(800, 600);
   
   webs = new Webs();
+  fly = new Fly();
+  butterfly = new Butterfly();
+  centipede = new Centipede();
   spider = new Spider();
   
 }
@@ -32,6 +38,9 @@ void draw() {
   background(255);
   
   webs.display();
+  fly.display();
+  butterfly.display();
+  centipede.display();
   spider.display();
   spider.move();
   
