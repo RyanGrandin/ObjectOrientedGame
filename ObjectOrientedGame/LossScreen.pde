@@ -19,6 +19,7 @@ class LossScreen {
     
     // background
     fill(255, 0, 0);
+    rectMode(CENTER);
     rect(width/2, height/2, width, height);
     
     // spider
@@ -28,9 +29,23 @@ class LossScreen {
     spider.displaySpider();
     popMatrix();
     
+    // top wing
+    triangle(width/4*3, height/2-100, width, 50, width, height/2-100);
+    
+    // bottom wing
+    rectMode(CORNER);
+    rect(width/4*3, height/2-100, 100, 300);
+    triangle(width/4*3, height/2+200, width/4*3+100, height/2+200, 
+    width/4*3+125, height/2+300);
+    triangle(width/4*3, height/2+100, width/4*3+100, height/2+100, 
+    width/4*3+125, height/2+200);
+    triangle(width/4*3, height/2, width/4*3+100, height/2, 
+    width/4*3+125, height/2+100);
+    
     // body and head)
     fill(0);
-    quad(width/2, height/4-75, width, 150, width, 500, width/2, height/4+75);
+    quad(width/2, height/4-75, width, 100, width, 400, width/2, 
+    height/4+75);
     circle(width/2, height/4, 150);
     
     // beak
