@@ -50,7 +50,7 @@ void draw() {
   spider.displayString();
   spider.displaySpider();
   spider.move();*/
-  lossScreen.display();
-  //winScreen.display();
+  //lossScreen.display();
+  winScreen.display();
   
 }
