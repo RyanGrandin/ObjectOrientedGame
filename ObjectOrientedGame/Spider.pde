@@ -7,23 +7,28 @@ class Spider {
   PVector mouseLocation;
   
   // constructor
-  Spider() {
+  Spider(PVector startLocation) {
     
     //initialise data
-    location = new PVector(width/2, height/2);
+    location = new PVector();
+    location.set(startLocation);
     velocity = new PVector(0, 0);
     acceleration = new PVector(0, 0);
     mouseLocation = new PVector(width/2, height/2);
     
   }
   
-  // display method
-  void display() {
+  // method to display string
+  void displayString() {
     
-    // string
     strokeWeight(1);
     stroke(0);
     line(width/2, 0, location.x, location.y);
+    
+  }
+  
+  // method to display spider
+  void displaySpider() {
     
     // legs
     strokeWeight(1);

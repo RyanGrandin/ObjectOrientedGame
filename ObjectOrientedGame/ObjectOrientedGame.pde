@@ -20,6 +20,7 @@ Centipede centipede;
 Spider spider;
 LossScreen lossScreen;
 WinScreen winScreen;
+PVector spiderStartLocation;
 
 // setup function
 void setup() {
@@ -30,7 +31,8 @@ void setup() {
   fly = new Fly();
   butterfly = new Butterfly();
   centipede = new Centipede();
-  spider = new Spider();
+  spiderStartLocation = new PVector(width/2, height/2);
+  spider = new Spider(spiderStartLocation);
   lossScreen = new LossScreen();
   winScreen = new WinScreen();
   
@@ -45,7 +47,8 @@ void draw() {
   fly.display();
   butterfly.display();
   centipede.display();
-  spider.display();
+  spider.displayString();
+  spider.displaySpider();
   spider.move();*/
   lossScreen.display();
   //winScreen.display();
