@@ -18,6 +18,8 @@ Fly fly;
 Butterfly butterfly;
 Centipede centipede;
 Spider spider;
+LossScreen lossScreen;
+WinScreen winScreen;
 
 // setup function
 void setup() {
@@ -29,6 +31,8 @@ void setup() {
   butterfly = new Butterfly();
   centipede = new Centipede();
   spider = new Spider();
+  lossScreen = new LossScreen();
+  winScreen = new WinScreen();
   
 }
 
@@ -37,11 +41,13 @@ void draw() {
   
   background(255);
   
-  webs.display();
+  /*webs.display();
   fly.display();
   butterfly.display();
   centipede.display();
   spider.display();
-  spider.move();
+  spider.move();*/
+  lossScreen.display();
+  //winScreen.display();
   
 }
