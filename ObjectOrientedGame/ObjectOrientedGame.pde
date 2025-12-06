@@ -21,6 +21,9 @@ Spider spider;
 LossScreen lossScreen;
 WinScreen winScreen;
 PVector spiderStartLocation;
+int danger;
+int score;
+boolean play;
 
 // setup function
 void setup() {
@@ -35,22 +38,42 @@ void setup() {
   spider = new Spider(spiderStartLocation);
   lossScreen = new LossScreen();
   winScreen = new WinScreen();
+  danger = 0;
+  score = 0;
+  play = true;
   
 }
 
 // draw function
 void draw() {
   
-  background(255);
-  
-  /*webs.display();
-  fly.display();
-  butterfly.display();
-  centipede.display();
-  spider.displayString();
-  spider.displaySpider();
-  spider.move();*/
-  //lossScreen.display();
-  winScreen.display();
+  if (play == true) {
+    
+    background(255);
+    webs.display();
+    fly.display();
+    butterfly.display();
+    centipede.display();
+    spider.displayString();
+    spider.displaySpider();
+    spider.move();
+    
+    if (danger >= 100) {
+      
+      play = false;
+      background(255, 0, 0);
+      lossScreen.display();
+      
+    }
+    
+    if (score >= 100) {
+      
+      play = false;
+      background(0, 225, 0);
+      winScreen.display();
+      
+    }
+    
+  }
   
 }

@@ -15,6 +15,10 @@ class WinScreen {
   // display method
   void display() {
     
+    strokeWeight(3);
+    stroke(0);
+    line(50, 0, width/4*3, height/4*3);
+    
     // spider
     pushMatrix();
     translate(width/4*3, height/4*3);

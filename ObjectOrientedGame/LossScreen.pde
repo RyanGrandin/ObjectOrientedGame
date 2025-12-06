@@ -17,11 +17,6 @@ class LossScreen {
     
     noStroke();
     
-    // background
-    fill(255, 0, 0);
-    rectMode(CENTER);
-    rect(width/2, height/2, width, height);
-    
     // spider
     pushMatrix();
     translate(width/2-125, height/4+75);
