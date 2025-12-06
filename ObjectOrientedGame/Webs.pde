@@ -1,9 +1,37 @@
 class Webs {
   
+  float spawnRegion1MinX;
+  float spawnRegion1MaxX;
+  float spawnRegion1MinY;
+  float spawnRegion1MaxY;
+  
+  float spawnRegion2MinX;
+  float spawnRegion2MaxX;
+  float spawnRegion2MinY;
+  float spawnRegion2MaxY;
+  
+  float spawnRegion3MinX;
+  float spawnRegion3MaxX;
+  float spawnRegion3MinY;
+  float spawnRegion3MaxY;
+  
   // constructor
   Webs() {
     
+    spawnRegion1MinX = 0;
+    spawnRegion1MaxX = 40;
+    spawnRegion1MinY = 0;
+    spawnRegion1MaxY = 70;
     
+    spawnRegion2MinX = width-140;
+    spawnRegion2MaxX = 0;
+    spawnRegion2MinY = 0;
+    spawnRegion2MaxY = 120;
+    
+    spawnRegion3MinX = width/2-80;
+    spawnRegion3MaxX = width/2+10;
+    spawnRegion3MinY = height/2-50;
+    spawnRegion3MaxY = height/2+30;
     
   }
   

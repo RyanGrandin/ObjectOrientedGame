@@ -2,14 +2,24 @@ class Fly {
   
   // declare data
   int pointValue;
+  float web1XMin;
+  float web1XMax;
+  float web1YMin;
+  float web1YMax;
   PVector location;
   
   // constructor
-  Fly() {
+  Fly(float tempWeb1XMin, float tempWeb1XMax, float tempWeb1YMin, 
+  float tempWeb1YMax) {
     
     // initialise data
     pointValue = 1;
-    location = new PVector(width/4, height/4);
+    web1XMin = tempWeb1XMin;
+    web1XMax = tempWeb1XMax;
+    web1YMin = tempWeb1YMin;
+    web1YMax = tempWeb1YMax;
+    location = new PVector(random(web1XMin, web1XMax), random(web1YMin, 
+    web1YMax));
     
   }
   

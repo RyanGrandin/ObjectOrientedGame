@@ -14,9 +14,7 @@ Instructions for Play:
 
 // declare global variables
 Webs webs;
-Fly fly;
-Butterfly butterfly;
-Centipede centipede;
+Bugs bugs;
 Spider spider;
 LossScreen lossScreen;
 WinScreen winScreen;
@@ -24,6 +22,7 @@ PVector spiderStartLocation;
 int danger;
 int score;
 boolean play;
+int secElapsed;
 
 // setup function
 void setup() {
@@ -31,9 +30,8 @@ void setup() {
   size(800, 600);
   
   webs = new Webs();
-  fly = new Fly();
-  butterfly = new Butterfly();
-  centipede = new Centipede();
+  bugs = new Bugs(webs.spawnRegion1MinX, webs.spawnRegion1MaxX, 
+  webs.spawnRegion1MinY, webs.spawnRegion1MaxY);
   spiderStartLocation = new PVector(width/2, height/2);
   spider = new Spider(spiderStartLocation);
   lossScreen = new LossScreen();
@@ -41,6 +39,8 @@ void setup() {
   danger = 0;
   score = 0;
   play = true;
+  
+  secElapsed = 0;
   
 }
 
@@ -51,12 +51,24 @@ void draw() {
     
     background(255);
     webs.display();
-    fly.display();
-    butterfly.display();
-    centipede.display();
+    bugs.spawn(secElapsed);
+    bugs.display();
     spider.displayString();
     spider.displaySpider();
     spider.move();
+    
+    for (int i = 0; i < bugs.flies.size(); i++) {
+      
+      Fly fly = bugs.flies.get(i);
+      if (spider.location.x > fly.location.x-25 && spider.location.x < 
+      fly.location.x+25 && spider.location.y > fly.location.y-25 && 
+      spider.location.y < fly.location.y+25) {
+        
+        bugs.flies.remove(i);
+        
+      }
+      
+    }
     
     if (danger >= 100) {
       
@@ -73,6 +85,12 @@ void draw() {
       winScreen.display();
       
     }
+    
+  }
+  
+  if (frameCount % 60 == 0) {
+    
+    secElapsed++;
     
   }
   
