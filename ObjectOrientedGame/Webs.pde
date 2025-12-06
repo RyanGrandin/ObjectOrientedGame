@@ -18,10 +18,15 @@ class Webs {
   // constructor
   Webs() {
     
-    spawnRegion1MinX = 0;
+    /*spawnRegion1MinX = 0;
     spawnRegion1MaxX = 40;
     spawnRegion1MinY = 0;
-    spawnRegion1MaxY = 70;
+    spawnRegion1MaxY = 70;*/
+    
+    spawnRegion1MinX = 0;
+    spawnRegion1MaxX = width;
+    spawnRegion1MinY = 0;
+    spawnRegion1MaxY = height/2;
     
     spawnRegion2MinX = width-140;
     spawnRegion2MaxX = 0;

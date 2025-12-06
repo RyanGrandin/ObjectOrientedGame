@@ -32,7 +32,7 @@ class Bugs {
     
     if (secElapsed % 3 == 0) {
       
-      if (flies.size() < 3) {
+      if (flies.size() < 20) {
         
         flies.add(new Fly(web1XMin, web1XMax, web1YMin, web1YMax));
         
